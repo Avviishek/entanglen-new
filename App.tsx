@@ -7,30 +7,39 @@ import HowItWorks from './components/HowItWorks';
 import MeetOurTutors from './components/MeetOurTutors';
 import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
+import Founders from './components/Founders';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import TrialFormModal from './components/TrialFormModal';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
 
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleOpenModal = (subject?: string) => {
+    setIsModalOpen(true);
+    if (subject) setSelectedSubject(subject);
+  };
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedSubject(null);
+  };
 
   return (
     <div className="bg-white text-gray-800 font-sans antialiased">
-      <Header onBookTrialClick={handleOpenModal} />
+      <Header onBookTrialClick={() => handleOpenModal()} />
       <main>
-        <Hero onBookTrialClick={handleOpenModal} />
+        <Hero onBookTrialClick={() => handleOpenModal()} />
         <WhyChooseUs />
         <HowItWorks />
         <MeetOurTutors />
         <Testimonials />
-        <Pricing />
-        <FinalCTA onBookTrialClick={handleOpenModal} />
+  <Pricing onChooseSubject={handleOpenModal} />
+  <Founders />
+        <FinalCTA onBookTrialClick={() => handleOpenModal()} />
       </main>
       <Footer />
-      <TrialFormModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <TrialFormModal isOpen={isModalOpen} onClose={handleCloseModal} selectedSubject={selectedSubject} />
     </div>
   );
 }
