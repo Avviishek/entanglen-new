@@ -50,8 +50,7 @@ const TrialFormModal: React.FC<TrialFormModalProps> = ({ isOpen, onClose }) => {
         <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors" aria-label="Close modal">
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
         </button>
-        <h2 id="modal-title" className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Book Your Free Trial</h2>
-        <p className="text-gray-500 mb-6">Please fill out the form below. Your details will be sent directly to Formforge.</p>
+  {/* Heading and description removed as requested */}
         {completed ? (
           <div className="text-center py-8">
             <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-5">
