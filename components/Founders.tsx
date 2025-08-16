@@ -4,12 +4,12 @@ const founders = [
   {
     name: 'Avishek Dastidar',
     role: 'Founder',
-    image: 'blob:https://web.whatsapp.com/e94a7db1-81e4-42a1-b284-90f4279bc19c',
+    image: '/avishek.jpg', // Place avishek.jpg in public folder
   },
   {
     name: 'Mahendra Pratap Singh',
     role: 'Founder',
-    image: 'blob:https://web.whatsapp.com/b718b212-d603-4f39-b831-c9d3c50338af',
+    image: '/mahendra.jpg', // Place mahendra.jpg in public folder
   },
   {
     name: 'Kunal Kawale',
