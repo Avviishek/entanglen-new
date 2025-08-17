@@ -16,8 +16,8 @@ const FinalCTA: React.FC<{ onBookTrialClick: () => void }> = ({ onBookTrialClick
           </div>
           <div className="mt-6 text-blue-200">
             <p>Or want to talk to us? 
-              <a href="#" className="font-semibold underline hover:text-white ml-2">Chat With Us</a> or 
-              <a href="#" className="font-semibold underline hover:text-white ml-1">Schedule a Call</a>.
+              <a href="mailto:info@entanglestudy.com" className="font-semibold underline hover:text-white ml-2">Chat With Us</a> or 
+              <a href="mailto:info@entanglestudy.com" className="font-semibold underline hover:text-white ml-1">Schedule a Call</a>.
             </p>
           </div>
         </div>
