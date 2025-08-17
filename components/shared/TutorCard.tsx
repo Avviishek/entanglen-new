@@ -12,7 +12,12 @@ interface TutorCardProps {
 const TutorCard: React.FC<TutorCardProps> = ({ tutor, onBookTrial }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
-      <img className="h-48 w-full object-cover" src={tutor.photoUrl} alt={tutor.name} />
+      <img
+        className="h-48 w-full object-cover"
+        src={tutor.image.startsWith('/') ? tutor.image : `/${tutor.image}`}
+        alt={tutor.name}
+        onError={e => (e.currentTarget.src = 'https://via.placeholder.com/200x200?text=No+Image')}
+      />
       <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-gray-900">{tutor.name}</h3>
         <p className="text-sm text-blue-600 font-semibold mt-1">{tutor.experience} experience</p>

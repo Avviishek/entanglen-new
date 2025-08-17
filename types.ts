@@ -2,7 +2,7 @@
 export interface Tutor {
   id: number;
   name: string;
-  photoUrl: string;
+  image: string;
   subjects: string[];
   experience: string;
   languages: string[];

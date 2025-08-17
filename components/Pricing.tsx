@@ -2,7 +2,11 @@ import React from 'react';
 import { PRICING_PLANS } from '../constants';
 import Button from './shared/Button';
 
-const Pricing: React.FC = () => {
+interface PricingProps {
+  onChooseSubject?: (subject: string) => void;
+}
+
+const Pricing: React.FC<PricingProps> = ({ onChooseSubject }) => {
   // Change this to "$" for dollar or "₹" for rupee
   const currency = "$";
 
@@ -70,6 +74,7 @@ const Pricing: React.FC = () => {
                   variant={subject.highlight ? 'primary' : 'secondary'}
                   size="large"
                   className="w-full"
+                  onClick={() => onChooseSubject && onChooseSubject(subject.plan)}
                 >
                   Choose Subject
                 </Button>

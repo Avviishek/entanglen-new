@@ -5,7 +5,7 @@ export const TUTORS: Tutor[] = [
   {
     id: 1,
     name: 'Aarav Sharma',
-    photoUrl: 'https://picsum.photos/id/1005/200/200',
+    image: '1.png',
     subjects: ['Mathematics', 'Physics'],
     experience: '8+ years',
     languages: ['English', 'Hindi'],
@@ -15,7 +15,7 @@ export const TUTORS: Tutor[] = [
   {
     id: 2,
     name: 'Priya Patel',
-    photoUrl: 'https://picsum.photos/id/1011/200/200',
+    image: '2.jpeg',
     subjects: ['Chemistry', 'Biology'],
     experience: '6+ years',
     languages: ['English', 'Gujarati'],
@@ -25,7 +25,7 @@ export const TUTORS: Tutor[] = [
   {
     id: 3,
     name: 'Rohan Gupta',
-    photoUrl: 'https://picsum.photos/id/1012/200/200',
+    image: '/3.jpeg',
     subjects: ['Computer Science', 'Mathematics'],
     experience: '10+ years',
     languages: ['English', 'Hindi'],
@@ -35,27 +35,57 @@ export const TUTORS: Tutor[] = [
   {
     id: 4,
     name: 'Sneha Reddy',
-    photoUrl: 'https://picsum.photos/id/1027/200/200',
+    image: '/4.jpeg',
     subjects: ['English Literature', 'History'],
     experience: '7+ years',
     languages: ['English', 'Telugu'],
     availability: 'Part-time',
     testimonial: 'Sneha has a wonderful way of bringing history to life.'
   },
-    {
-    id: 4,
+  {
+    id: 5,
     name: 'Sneha Reddy',
-    photoUrl: 'https://picsum.photos/id/1027/200/200',
+    image: '/5.jpeg',
     subjects: ['English Literature', 'History'],
     experience: '7+ years',
     languages: ['English', 'Telugu'],
     availability: 'Part-time',
     testimonial: 'Sneha has a wonderful way of bringing history to life.'
   },
-    {
-    id: 4,
+  {
+    id: 6,
     name: 'Sneha Reddy',
-    photoUrl: 'https://picsum.photos/id/1027/200/200',
+    image: '/6.jpeg',
+    subjects: ['English Literature', 'History'],
+    experience: '7+ years',
+    languages: ['English', 'Telugu'],
+    availability: 'Part-time',
+    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+  },
+  {
+    id: 7,
+    name: 'Sneha Reddy',
+    image: '/7.jpeg',
+    subjects: ['English Literature', 'History'],
+    experience: '7+ years',
+    languages: ['English', 'Telugu'],
+    availability: 'Part-time',
+    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+  },
+  {
+    id: 8,
+    name: 'Sneha Reddy',
+    image: '/8.jpeg',
+    subjects: ['English Literature', 'History'],
+    experience: '7+ years',
+    languages: ['English', 'Telugu'],
+    availability: 'Part-time',
+    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+  },
+  {
+    id: 9,
+    name: 'Sneha Reddy',
+    image: '/9.jpeg',
     subjects: ['English Literature', 'History'],
     experience: '7+ years',
     languages: ['English', 'Telugu'],
