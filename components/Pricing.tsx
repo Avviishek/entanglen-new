@@ -46,9 +46,9 @@ const Pricing: React.FC<PricingProps> = ({ onChooseSubject }) => {
               </div>
 
               {/* Cost per hour */}
-              <p className="mt-2 text-center text-gray-500">
+              {/* <p className="mt-2 text-center text-gray-500">
                 {currency}{subject.costPerHour}/hr
-              </p>
+              </p> */}
 
               {/* Features */}
               <ul className="mt-8 space-y-4 text-gray-600 flex-grow">

@@ -8,8 +8,8 @@ const Header: React.FC<{ onBookTrialClick: () => void }> = ({ onBookTrialClick }
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-bold text-blue-600">
-              Entangle
+            <a href="#" className="flex items-center">
+                <img src="/logo.png" alt="Logo" className="h-56-auto mr-2" style={{ maxHeight: '200px' }} />
             </a>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
