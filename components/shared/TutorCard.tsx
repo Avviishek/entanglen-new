@@ -11,9 +11,9 @@ interface TutorCardProps {
 // ...existing code...
 const TutorCard: React.FC<TutorCardProps> = ({ tutor, onBookTrial }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300" style={{ minHeight: '500px' }}>
       <img
-        className="h-72 w-full object-cover"
+        className="h-96 w-full object-contain bg-gray-100"
         src={tutor.image.startsWith('/') ? tutor.image : `/${tutor.image}`}
         alt={tutor.name}
         onError={e => (e.currentTarget.src = 'https://via.placeholder.com/200x200?text=No+Image')}
