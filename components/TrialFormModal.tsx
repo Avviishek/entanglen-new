@@ -54,7 +54,8 @@ const TrialFormModal: React.FC<TrialFormModalProps> = ({ isOpen, onClose, select
       aria-labelledby="modal-title"
     >
       <div
-        className={`bg-white rounded-2xl shadow-2xl p-6 sm:p-8 max-w-md w-full relative transform transition-all duration-300 ease-in-out ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}
+        className={`bg-white rounded-2xl shadow-2xl p-6 sm:p-8 max-w-2xl w-full mx-auto relative transform transition-all duration-300 ease-in-out ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}
+        style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
         onClick={e => e.stopPropagation()}
       >
         <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors" aria-label="Close modal">
@@ -75,15 +76,15 @@ const TrialFormModal: React.FC<TrialFormModalProps> = ({ isOpen, onClose, select
             </div>
           </div>
         ) : (
-          <div className="w-full h-[600px]">
+          <div className="w-full h-[600px] flex justify-center items-center">
             {!formError ? (
               <iframe
                 src="https://formforge.solutions/form/60236590-621e-486c-9ec3-683e0e312b8c"
-                width="100%"
+                width="900"
                 height="600"
                 frameBorder="0"
                 title="Formforge Trial Request"
-                style={{ borderRadius: '16px', width: '100%', height: '100%' }}
+                style={{ borderRadius: '16px', width: '900px', height: '100%', display: 'block', margin: '0 auto' }}
                 onError={() => setFormError(true)}
               ></iframe>
             ) : (

@@ -34,8 +34,8 @@ function App() {
         <HowItWorks />
         <MeetOurTutors />
         <Testimonials />
-  <Pricing onChooseSubject={handleOpenModal} />
-  <Founders />
+        {/* <Pricing onChooseSubject={handleOpenModal} /> */}
+        <Founders />
         <FinalCTA onBookTrialClick={() => handleOpenModal()} />
       </main>
       <Footer />

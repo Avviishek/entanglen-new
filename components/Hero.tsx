@@ -19,7 +19,7 @@ const Hero: React.FC<{ onBookTrialClick: () => void }> = ({ onBookTrialClick }) 
               <span className="block text-blue-600">Affordable. Reliable. Online.</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-600">
-              Live 1-on-1 online tutoring for students in Europe, America & beyond — starting at just <span className="font-bold text-green-600">$90/Monthly</span>.
+              Live 1-on-1 online tutoring for students in Europe, UAE & beyond — starting at  <span className="font-bold text-green-600">The price you decide.</span>
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
               <Button variant="primary" size="large" onClick={onBookTrialClick}>
