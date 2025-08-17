@@ -14,7 +14,7 @@ const founders = [
   {
     name: 'Kunal Kawale',
     role: 'Founder',
-    image: 'https://via.placeholder.com/200x200?text=Kunal+Kawale',
+    image: '/kunal.jpeg', // Place kunal.jpg in public folder
   },
 ];
 
