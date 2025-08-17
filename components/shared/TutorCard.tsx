@@ -13,7 +13,7 @@ const TutorCard: React.FC<TutorCardProps> = ({ tutor, onBookTrial }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
       <img
-        className="h-48 w-full object-cover"
+        className="h-72 w-full object-cover"
         src={tutor.image.startsWith('/') ? tutor.image : `/${tutor.image}`}
         alt={tutor.name}
         onError={e => (e.currentTarget.src = 'https://via.placeholder.com/200x200?text=No+Image')}
