@@ -6,14 +6,16 @@ import { TUTORS } from '../constants';
 interface TrialFormModalProps {
   isOpen: boolean;
   onClose: () => void;
+  selectedSubject?: string;
 }
 
 const subjects = [...new Set(TUTORS.flatMap(t => t.subjects))];
 const defaultSubject = subjects.length > 0 ? subjects[0] : '';
 
 
-const TrialFormModal: React.FC<TrialFormModalProps> = ({ isOpen, onClose }) => {
+const TrialFormModal: React.FC<TrialFormModalProps> = ({ isOpen, onClose, selectedSubject }) => {
   const [completed, setCompleted] = React.useState(false);
+  const [formError, setFormError] = React.useState(false);
 
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
@@ -21,16 +23,24 @@ const TrialFormModal: React.FC<TrialFormModalProps> = ({ isOpen, onClose }) => {
         onClose();
       }
     };
+    const handleFormforgeMessage = (event: MessageEvent) => {
+      if (event.origin === 'https://formforge.solutions' && event.data === 'formforge:submitted') {
+        setCompleted(true);
+      }
+    };
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       window.addEventListener('keydown', handleEsc);
+      window.addEventListener('message', handleFormforgeMessage);
     } else {
       document.body.style.overflow = 'unset';
       setCompleted(false);
+      setFormError(false);
     }
     return () => {
       document.body.style.overflow = 'unset';
       window.removeEventListener('keydown', handleEsc);
+      window.removeEventListener('message', handleFormforgeMessage);
     };
   }, [isOpen, onClose]);
 
@@ -51,7 +61,7 @@ const TrialFormModal: React.FC<TrialFormModalProps> = ({ isOpen, onClose }) => {
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
         </button>
   {/* Heading and description removed as requested */}
-        {completed ? (
+  {completed ? (
           <div className="text-center py-8">
             <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-5">
               <svg className="h-8 w-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -66,21 +76,22 @@ const TrialFormModal: React.FC<TrialFormModalProps> = ({ isOpen, onClose }) => {
           </div>
         ) : (
           <div className="w-full h-[600px]">
-            <iframe
-              src="https://formforge.solutions/form/60236590-621e-486c-9ec3-683e0e312b8c"
-              width="100%"
-              height="600"
-              frameBorder="0"
-              title="Formforge Trial Request"
-              style={{ borderRadius: '16px', width: '100%', height: '100%' }}
-              onLoad={() => {
-                window.addEventListener('message', function(event) {
-                  if (event.origin === 'https://formforge.solutions' && event.data === 'formforge:submitted') {
-                    setCompleted(true);
-                  }
-                });
-              }}
-            ></iframe>
+            {!formError ? (
+              <iframe
+                src="https://formforge.solutions/form/60236590-621e-486c-9ec3-683e0e312b8c"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                title="Formforge Trial Request"
+                style={{ borderRadius: '16px', width: '100%', height: '100%' }}
+                onError={() => setFormError(true)}
+              ></iframe>
+            ) : (
+              <div className="flex flex-col items-center justify-center h-full">
+                <p className="text-red-600 font-semibold">Failed to load the form. Please check your internet connection or try again later.</p>
+                <Button variant="primary" size="medium" onClick={onClose} className="mt-4">Close</Button>
+              </div>
+            )}
           </div>
         )}
       </div>

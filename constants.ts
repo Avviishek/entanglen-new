@@ -4,93 +4,93 @@ import { Tutor, Testimonial, PricingPlan } from './types';
 export const TUTORS: Tutor[] = [
   {
     id: 1,
-    name: 'Aarav Sharma',
+    name: 'Harsh Verma',
     image: '1.png',
     subjects: ['Mathematics', 'Physics'],
-    experience: '8+ years',
-    languages: ['English', 'Hindi'],
+    experience: '4+ years',
+    languages: ['English'],
     availability: 'Full-time',
-    testimonial: 'Aarav makes complex physics concepts easy to understand. Highly recommended!'
+    testimonial: 'Harsh makes complex physics concepts easy to understand. Highly recommended!'
   },
   {
     id: 2,
-    name: 'Priya Patel',
+    name: 'Rahul Boora',
     image: '2.jpeg',
-    subjects: ['Chemistry', 'Biology'],
-    experience: '6+ years',
-    languages: ['English', 'Gujarati'],
-    availability: 'Part-time',
-    testimonial: 'Priya is an amazing chemistry tutor. My grades have improved significantly.'
+    subjects: ['Chemistry', 'Physics'],
+    experience: '5+ years',
+    languages: ['English'],
+    availability: 'Full-time',
+    testimonial: 'Rahul is an amazing chemistry & Physics tutor. My grades have improved significantly.'
   },
   {
     id: 3,
-    name: 'Rohan Gupta',
+    name: 'Kanupriya Sigh',
     image: '/3.jpeg',
-    subjects: ['Computer Science', 'Mathematics'],
-    experience: '10+ years',
-    languages: ['English', 'Hindi'],
+    subjects: ['English'],
+    experience: '3+ years',
+    languages: ['English'],
     availability: 'Full-time',
-    testimonial: 'Rohan is a patient and knowledgeable teacher, especially for coding.'
+    testimonial: 'Kanupriya is a patient and knowledgeable teacher, especially for English.'
   },
   {
     id: 4,
-    name: 'Sneha Reddy',
+    name: 'Mohanraj T',
     image: '/4.jpeg',
-    subjects: ['English Literature', 'History'],
+    subjects: ['Computer Science'],
     experience: '7+ years',
-    languages: ['English', 'Telugu'],
-    availability: 'Part-time',
-    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+    languages: ['English'],
+    availability: 'Full-time',
+    testimonial: 'Mohanraj is an exceptional Computer Science tutor. His way of breaking down coding concepts makes learning enjoyable and practical.'
   },
   {
     id: 5,
-    name: 'Sneha Reddy',
+    name: 'Vineeta Sharma',
     image: '/5.jpeg',
-    subjects: ['English Literature', 'History'],
+    subjects: ['Mathematics', 'Science'],
     experience: '7+ years',
-    languages: ['English', 'Telugu'],
-    availability: 'Part-time',
-    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+    languages: ['English'],
+    availability: 'Full-time',
+    testimonial: 'Vineeta has a wonderful way of making Mathematics and Science easy to understand and engaging for students.'
   },
   {
     id: 6,
-    name: 'Sneha Reddy',
+    name: 'Manoj Sharma',
     image: '/6.jpeg',
-    subjects: ['English Literature', 'History'],
-    experience: '7+ years',
-    languages: ['English', 'Telugu'],
-    availability: 'Part-time',
-    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+    subjects: ['English'],
+    experience: '4+ years',
+    languages: ['English'],
+    availability: 'Full-time',
+    testimonial: 'Manoj makes learning English enjoyable and interactive. She focuses on clear explanations and practical examples that build real confidence in communication.'
   },
   {
     id: 7,
-    name: 'Sneha Reddy',
+    name: 'Ritesh Kumar Singh',
     image: '/7.jpeg',
-    subjects: ['English Literature', 'History'],
-    experience: '7+ years',
-    languages: ['English', 'Telugu'],
-    availability: 'Part-time',
-    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+    subjects: ['English'],
+    experience: '5+ years',
+    languages: ['English'],
+    availability: 'Full-time',
+    testimonial: 'Ritesh makes English easy and fun to learn!'
   },
   {
     id: 8,
-    name: 'Sneha Reddy',
+    name: 'Harshit Malvijay',
     image: '/8.jpeg',
-    subjects: ['English Literature', 'History'],
-    experience: '7+ years',
-    languages: ['English', 'Telugu'],
-    availability: 'Part-time',
-    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+    subjects: ['Coding', 'Mathematics'],
+    experience: '2+ years',
+    languages: ['English'],
+    availability: 'Full-time',
+    testimonial: 'Harshit explains coding and math in a way that’s simple and clear.'
   },
   {
     id: 9,
-    name: 'Sneha Reddy',
+    name: 'Sujata Singh',
     image: '/9.jpeg',
-    subjects: ['English Literature', 'History'],
-    experience: '7+ years',
-    languages: ['English', 'Telugu'],
-    availability: 'Part-time',
-    testimonial: 'Sneha has a wonderful way of bringing history to life.'
+    subjects: ['Biology', 'Chemistry'],
+    experience: '4+ years',
+    languages: ['English'],
+    availability: 'Full-time',
+    testimonial: 'Sujata explains biology and chemistry so clearly that tough topics feel simple.'
   }
 ];
 
